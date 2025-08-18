@@ -27,11 +27,32 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
-        components = new System.ComponentModel.Container();
+        menuStrip = new MenuStrip();
+        SuspendLayout();
+        // 
+        // menuStrip
+        // 
+        menuStrip.ImageScalingSize = new Size(24, 24);
+        menuStrip.Location = new Point(0, 0);
+        menuStrip.Name = "menuStrip";
+        menuStrip.Size = new Size(800, 24);
+        menuStrip.TabIndex = 0;
+        menuStrip.Text = "menu bar";
+        // 
+        // MainForm
+        // 
+        AutoScaleDimensions = new SizeF(11F, 24F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(menuStrip);
+        MainMenuStrip = menuStrip;
+        Name = "MainForm";
         Text = "Braille Dot Notepad";
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
+
+    private MenuStrip menuStrip;
 }
